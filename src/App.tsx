@@ -73,7 +73,7 @@ function App() {
               }}
             >
               <a
-                href="mailto:hall@productofla.com"
+                href="mailto:info@strange.space"
                 style={{ textDecoration: "none", color: "white" }}
               >
                 For Inquiries.
