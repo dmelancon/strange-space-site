@@ -1,5 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Klavika";
+  src: url("./assets/fonts/KLAVIKAR.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Klavika", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -13,6 +24,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Full-screen snap scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+.snap-container {
+  height: 100vh;
+  height: 100dvh; /* Dynamic viewport height for mobile */
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.snap-section {
+  height: 100vh;
+  height: 100dvh; /* Dynamic viewport height for mobile */
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Fallback */
+  min-height: 100dvh; /* Dynamic viewport height fallback */
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -24,12 +59,9 @@ a:hover {
 
 body {
   margin: 0 !important;
-  /* display: flex; */
-  /* place-items: center; */
-  /* min-width: 320px; */
-  /* min-height: 100vh; */
 }
-*/ h1 {
+
+h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
@@ -51,6 +83,44 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Orbit Animations */
+@keyframes rotate-orbit-cw {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-orbit-ccw {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.orbit1 {
+  transform-box: fill-box;
+  transform-origin: 200px 200px;
+  animation: rotate-orbit-cw 24s linear infinite;
+}
+.orbit2 {
+  transform-box: fill-box;
+  transform-origin: 200px 200px;
+  animation: rotate-orbit-ccw 32s linear infinite;
+}
+.orbit3 {
+  transform-box: fill-box;
+  transform-origin: 200px 200px;
+  animation: rotate-orbit-cw 40s linear infinite;
+}
+.orbit4 {
+  transform-box: fill-box;
+  transform-origin: 200px 200px;
+  animation: rotate-orbit-ccw 56s linear infinite;
 }
 
 @media (prefers-color-scheme: light) {
