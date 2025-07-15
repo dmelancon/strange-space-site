@@ -1,36 +1,56 @@
 import "./App.css";
 import logo from "./assets/Logo_White.png";
 import OrbitDiagram from "./components/OrbitDiagram";
+import VimeoEmbed from "./components/VimeoEmbed";
 
 function App() {
   return (
     <div className="snap-container bg-gray-950">
       {/* First Page - Logo */}
       <section className="snap-section">
-        <div className="text-center">
-          <img
-            src={logo}
-            alt="Strange.Space Logo"
-            className="mx-auto max-w-xs md:max-w-sm lg:max-w-md"
-          />
+         <div className="flex flex-col items-center justify-center md:gap-16 gap-8  max-w-xl">
+          <div className="text-center">
+            <img
+              src={logo}
+              alt="Strange.Space Logo"
+              className="mx-auto max-w-xs md:max-w-xs lg:max-w-xs"
+            />
+          </div>
+          <div className="text-center max-w-4xl mx-auto px-6">
+            <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed font-klavika">
+              Strange.space is a creative technology studio that builds digital
+              experiences for screens and spaces.
+            </p>
+          </div>
+          <div className="text-center max-w-2xl mx-auto px-0">
+            <div className="hidden sm:flex items-center justify-center space-x-4 md:space-x-2 text-white text-lg md:text-xl lg:text-xl font-klavika uppercase">
+              <span className="inline-flex items-center">🏁 YOU</span>
+              <span className="text-xl">→</span>
+              <span className="inline-flex items-center">🤝 STRANGE.SPACE</span>
+              <span className="text-xl ">→</span>
+              <span className="inline-flex items-center">🎨 DESIGN</span>
+              <span className="text-xl ">→</span>
+              <span className="inline-flex items-center">🛠️ BUILD</span>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Second Page - Headline */}
-      <section className="snap-section">
+      {/* <section className="snap-section">
         <div className="text-center max-w-4xl mx-auto px-6">
           <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed font-klavika">
             Strange.space is a creative technology studio that builds digital
             experiences for screens and spaces.
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* Third Page - Process */}
-      <section className="snap-section">
+      <section className="snap-section sm:hidden ">
         <div className="text-center max-w-6xl mx-auto px-6">
           <div className="hidden md:flex items-center justify-center space-x-4 md:space-x-8 text-white text-lg md:text-2xl lg:text-3xl font-klavika uppercase">
-            <span className="inline-flex items-center">🏁 YOU</span>
+            <span className=" inline-flex items-center">🏁 YOU</span>
             <span className="text-xl md:text-3xl lg:text-4xl">→</span>
             <span className="inline-flex items-center">🤝 STRANGE.SPACE</span>
             <span className="text-xl md:text-3xl lg:text-4xl">→</span>
@@ -75,6 +95,24 @@ function App() {
               vision, strategy, and client relationships
             </p>
           </div>
+        </div>
+      </section>
+      {/* Fifth Page - REEL */}
+      <section className="snap-section">
+        <div className="flex flex-col items-center justify-center w-full h-full px-6">
+          <VimeoEmbed 
+            videoId="916812001" 
+            title="Strange.Space Reel"
+            className="w-full"
+          />
+        </div>
+      </section>
+      {/* Sixth Page - Footer */}
+      <section className="snap-section">
+        <div className="text-center max-w-4xl mx-auto px-6">
+          <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed font-klavika">
+           Contact us at <a href="mailto:hello@strange.space">hello@strange.space</a>
+          </p>
         </div>
       </section>
     </div>
