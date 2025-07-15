@@ -13,12 +13,12 @@ function App() {
             <img
               src={logo}
               alt="Strange.Space Logo"
-              className="mx-auto max-w-xs md:max-w-xs lg:max-w-xs"
+              className="mx-auto w-full h-auto max-w-[273px]"
             />
           </div>
           <div className="text-center max-w-4xl mx-auto px-6">
             <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed font-klavika">
-              Strange.space is a creative technology studio that builds digital
+              Strange.Space is a creative technology studio that builds digital
               experiences for screens and spaces.
             </p>
           </div>
