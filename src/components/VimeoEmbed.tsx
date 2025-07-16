@@ -1,4 +1,5 @@
 import React from 'react';
+import video from '../assets/Strange.Space_LandingVideo_v02.mp4';
 
 interface VimeoEmbedProps {
   videoId?: string;
@@ -7,7 +8,7 @@ interface VimeoEmbedProps {
 }
 
 const VimeoEmbed: React.FC<VimeoEmbedProps> = ({ videoId = "", title = "Vimeo video", className = "" }) => {
-  const videoUrl = videoId ? `https://player.vimeo.com/video/${videoId}?h=autoplay=0&title=0&byline=0&portrait=0` : "src\\assets\\Strange.Space_LandingVideo_v02.mp4";
+  const videoUrl = videoId ? `https://player.vimeo.com/video/${videoId}?h=autoplay=0&title=0&byline=0&portrait=0` : video;
   return (
     <div className={`relative w-full max-w-4xl mx-auto ${className}`}>
       <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg">
