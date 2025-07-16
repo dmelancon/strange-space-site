@@ -104,7 +104,7 @@ function App() {
       <section className="snap-section ">
         <div className="flex flex-col items-center justify-center w-full h-full px-6 ">
           <VimeoEmbed 
-            videoId="916812001" 
+            // videoId="916812001" 
             title="Strange.Space Reel"
             className="w-full"
           />
