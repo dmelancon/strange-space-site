@@ -1,14 +1,17 @@
 import "./App.css";
-import logo from "./assets/Logo_White.png";
+import logo from "./assets/StrangeSpace_White_Thin_v02.png";
 import OrbitDiagram from "./components/OrbitDiagram";
 import VimeoEmbed from "./components/VimeoEmbed";
+import NavigationDots from "./components/NavigationDots";
 
 function App() {
   return (
     <div className="snap-container bg-gray-950">
+      <NavigationDots />
+      
       {/* First Page - Logo */}
       <section className="snap-section">
-         <div className="flex flex-col items-center justify-center md:gap-16 gap-8  max-w-xl">
+         <div className="flex flex-col items-center justify-center md:gap-8 gap-8  max-w-xl">
           <div className="text-center">
             <img
               src={logo}
@@ -98,21 +101,18 @@ function App() {
         </div>
       </section>
       {/* Fifth Page - REEL */}
-      <section className="snap-section">
-        <div className="flex flex-col items-center justify-center w-full h-full px-6">
+      <section className="snap-section ">
+        <div className="flex flex-col items-center justify-center w-full h-full px-6 ">
           <VimeoEmbed 
             videoId="916812001" 
             title="Strange.Space Reel"
             className="w-full"
           />
-        </div>
-      </section>
-      {/* Sixth Page - Footer */}
-      <section className="snap-section">
-        <div className="text-center max-w-4xl mx-auto px-6">
-          <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed font-klavika">
+           <div className="text-center max-w-4xl mx-auto px-6">
+          <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed font-klavika mt-12">
            Contact us at <a href="mailto:hello@strange.space">hello@strange.space</a>
           </p>
+        </div>
         </div>
       </section>
     </div>
