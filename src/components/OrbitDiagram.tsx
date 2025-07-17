@@ -38,7 +38,7 @@ const OrbitCircle = ({
       cx={200 + orbitRadius}
       cy={200}
       r={radius}
-      fill="#111"
+      fill="#030712"
       stroke="#fff"
       strokeWidth="1"
     />
@@ -73,7 +73,7 @@ const OrbitText = ({
       <textPath href={pathId} startOffset={startOffset} textAnchor="middle">
         <tspan
           fill="#fff"
-          stroke="#111"
+          stroke="#030712"
           strokeWidth="0.7em"
           paintOrder="stroke"
           strokeLinejoin="round"
