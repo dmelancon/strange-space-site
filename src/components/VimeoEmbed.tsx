@@ -1,5 +1,5 @@
 import React from 'react';
-import video from '../assets/Strange.Space_LandingVideo_v02.mp4';
+import video from '../assets/reel.mp4';
 
 interface VimeoEmbedProps {
   videoId?: string;
